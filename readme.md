@@ -12,7 +12,7 @@ Simple chatbot!
 
 ## Background
 
-I made this for my elite qualifier project!
+I made this for my elite qualifier project.
 
 ## Install
 
@@ -20,6 +20,5 @@ Press run in repl.it to start the program.
 
 ## Usage
 
-Simply tell Chatbot your name and start chatting! 
+Simply tell Chatbot how you're doing and start chatting! 
 
-### Any optional sections
