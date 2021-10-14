@@ -20,5 +20,6 @@ Press run in repl.it to start the program.
 
 ## Usage
 
-Simply tell Chatbot how you're doing and start chatting! 
+Simply tell Chatbot how you're doing and start chatting!
 
+Cool program
