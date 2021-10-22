@@ -1,23 +1,26 @@
-import random
+import random, datetime, calendar, sys, time
+from datetime import date
 
 
-
-def bot_reply(user_input):
-  responses = []
-  with open('responses.txt', 'r') as f:
-   responses = f.read().split()
  
-  return random.choice(responses)
+ 
+time_now = datetime.datetime.now().hour
+ 
+ 
+today_date = date.today()
+calendar.day_name[today_date.weekday()]
+ 
 
-def init_chat():
-  quit_code = 'bye'
+if time_now < 12:
+   user_name = input('Good morning, stranger. I am Studybot. What is your name? ')
+   user_input = input(f'Hello, {user_name}. Happy {calendar.day_name[today_date.weekday()]}!') 
+  
+elif time_now > 12:
+   user_name = input('Good afternoon, stranger. I am Chatbot. What is your name? ')
+   user_input = input(f'Hello, {user_name}. Happy {calendar.day_name[today_date.weekday()]}!')
 
-  user_input = input('Hello, I am Chatbot. How are you? ')
-
-  while user_input != quit_code:
-
-    user_input = input(bot_reply(user_input) + "\n")
 
 
-if __name__ == "__main__":
-  init_chat()
+elif time_now > 6:
+   user_name = input('Good evening, stranger. I am Chatbot. What is your name? ')
+   user_input = input(f'Hello, {user_name}. Happy {calendar.day_name[today_date.weekday()]}!')
