@@ -8,8 +8,11 @@ time_now = datetime.datetime.now().hour
 today_date = date.today()
 calendar.day_name[today_date.weekday()]
  
-questions = ['anatomy1', 'anatomy2', 'anatomy3']
-random.shuffle(questions)
+questionsa = ['anatomy1', 'anatomy2', 'anatomy3']
+questionsb = ['chem1', 'chem2', 'chem3']
+questionsc = ['ep1', 'ep2', 'ep3']
+
+
 
 if time_now < 12:
    user_name = input('Good morning, stranger. I am Studybot. What is your name? ')
@@ -25,9 +28,10 @@ if time_now < 12:
    while True:
     if subject_ans == 'anatomy':
      print('loading questions...')
+     time.sleep(2)
      keep_running = True
      while keep_running:
-      this = random.choice(questions)
+      this = random.choice(questionsa)
       if this == 'anatomy1':
        ans_input = str.lower(input('What is the most basic cell in the nervous system? '))
        if ans_input == 'quit': 
@@ -57,7 +61,39 @@ if time_now < 12:
         print('Good job!')
      break
     elif subject_ans == 'chemistry':
-     print('hello world 2')
+     print('loading questions...')
+     time.sleep(1)
+     keep_running = True
+     while keep_running:
+       chem_q = random.choice(questionsb)
+       if chem_q == 'chem1':
+         chem_ans = str.lower(input('Is dissolving a physical or a chemical change? '))
+         if chem_ans == 'quit':
+           print('Bye, see you next time!')
+           sys.exit()
+         elif 'physical' not in chem_ans:
+           print('Not quite...')
+         else:
+            print('Correct!')
+       elif chem_q == 'chem2':
+         chemtwo_ans = str.lower(input('Does oxidation cause an atom to lose or gain electrons? '))
+         if chemtwo_ans == 'quit':
+           print('Bye bye!')
+           sys.exit()
+         elif 'lose' not in chemtwo_ans:
+           print('Nope...')
+         else:
+           print('You got it!')
+       elif chem_q == 'chem3':
+         chemthr_ans = str.lower(input('Does reduction cause an atom to lose or gain electrons? '))
+         if chemthr_ans == 'quit':
+           print('See you!')
+           sys.exit()
+         elif 'gain' not in chemthr_ans:
+           print('Incorrect...')
+         else:
+           print('Correct!')
+           
      break
     elif subject_ans == 'epidemiology':
      print('hello world 3')
@@ -84,9 +120,11 @@ elif time_now > 12:
 
    while True:
     if subject_ans == 'anatomy':
+     print('loading questions...')
+     time.sleep(1)
      keep_running = True
      while keep_running:
-      this = random.choice(questions)
+      this = random.choice(questionsa)
       if this == 'anatomy1':
        ans_input = str.lower(input('What is the most basic cell in the nervous system? '))
        if ans_input == 'quit': 
@@ -123,8 +161,8 @@ elif time_now > 12:
      break
     else:
      sec_try = str.lower(input("Sorry, I don't support that yet.. would you like to pick another subject? "))
-    if sec_try == 'yes':
-     subject_ans = str.lower(input(f'What subject do you want to study today {user_name} ? '))
+     if sec_try == 'yes':
+      subject_ans = str.lower(input(f'What subject do you want to study today {user_name} ? '))
    else:
     print('Okay... see you next time!')
     sys.exit()
@@ -146,7 +184,7 @@ elif time_now > 6:
      time.sleep(2)
      keep_running = True
      while keep_running:
-      this = random.choice(questions)
+      this = random.choice(questionsa)
       if this == 'anatomy1':
        ans_input = str.lower(input('What is the most basic cell in the nervous system? '))
        if ans_input == 'quit': 
