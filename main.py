@@ -1,4 +1,4 @@
-import datetime, calendar, sys
+import datetime, calendar, sys, random
 from datetime import date
 
  
@@ -8,6 +8,8 @@ time_now = datetime.datetime.now().hour
 today_date = date.today()
 calendar.day_name[today_date.weekday()]
  
+questions = ['anatomy1', 'anatomy2', 'anatomy3']
+random.shuffle(questions)
 
 if time_now < 12:
    user_name = input('Good morning, stranger. I am Studybot. What is your name? ')
@@ -22,7 +24,7 @@ if time_now < 12:
 
    while True:
     if subject_ans == 'anatomy':
-     print('hello world')
+     print('loading questions...')
      break
     elif subject_ans == 'chemistry':
      print('hello world 2')
@@ -53,6 +55,7 @@ elif time_now > 12:
    while True:
     if subject_ans == 'anatomy':
      print('hello world')
+     
      break
     elif subject_ans == 'chemistry':
      print('hello world 2')
