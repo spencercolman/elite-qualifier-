@@ -14,7 +14,7 @@ if time_now < 12:
    print(f'Hello, {user_name}. Happy {calendar.day_name[today_date.weekday()]}! ') 
    study_ans = str.lower(input('Ready to study? '))
    if study_ans == 'yes':
-    subject_ans = str.lower(input('What subject do you want to study today {user_name} ? '))
+    subject_ans = str.lower(input(f'What subject do you want to study today {user_name} ? '))
    else:
     print('Okay... see you next time!')
     sys.exit()
